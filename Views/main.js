@@ -38,21 +38,21 @@ function showNewOrdOnScreen(order) {
   const tablevalue = document.getElementById("table").value;
   document.getElementById("table").value = "";
 
-  if (tablevalue === "Table 1" || order.table === "Table 1") {
+  if (order.table === "Table 1") {
     const parentNode = document.getElementById("table1");
     const childElement = `<li id=${order.id}> ${order.price} - ${order.dish} - ${order.table}
                         <button onclick="deleteOrd('${order.id}','${order.table}')"> Delete </button>               
                         </li>`;
     parentNode.innerHTML = parentNode.innerHTML + childElement;
   }
-  if (tablevalue === "Table 2" || order.table === "Table 2") {
+  if (order.table === "Table 2") {
     const parentNode = document.getElementById("table2");
     const childElement = `<li id=${order.id}> ${order.price} - ${order.dish} - ${order.table}
                         <button onclick="deleteOrd('${order.id}','${order.table}')"> Delete </button>                
                         </li>`;
     parentNode.innerHTML = parentNode.innerHTML + childElement;
   }
-  if (tablevalue === "Table 3" || order.table === "Table 3") {
+  if (order.table === "Table 3") {
     const parentNode = document.getElementById("table3");
     const childElement = `<li id=${order.id}> ${order.price} - ${order.dish} - ${order.table}
                         <button onclick="deleteOrd('${order.id}','${order.table}')"> Delete </button>                
